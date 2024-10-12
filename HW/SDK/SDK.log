@@ -1,0 +1,7 @@
+11:47:06 INFO  : Registering command handlers for SDK TCF services
+11:47:07 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Mahdisa\Desktop\Git\SDR_AK203_raw\HW\SDK\temp_xsdb_launch_script.tcl
+11:47:09 INFO  : XSCT server has started successfully.
+11:47:09 INFO  : Successfully done setting XSCT server connection channel  
+11:47:12 INFO  : Successfully done setting SDK workspace  
+11:48:18 INFO  : Project 'system_top_hw_platform_0' created. You can now create BSPs and application projects targeting this hardware platform.
+11:48:40 INFO  : Refreshed build settings on project ts_pluto
