@@ -1,25 +1,25 @@
-set_property  -dict {PACKAGE_PIN  B19   IOSTANDARD  LVCMOS25} [get_ports  MDIO_PHY_mdc]       ;
-set_property  -dict {PACKAGE_PIN  A20   IOSTANDARD  LVCMOS25} [get_ports  MDIO_PHY_mdio_io]   ;
+# set_property  -dict {PACKAGE_PIN  B19   IOSTANDARD  LVCMOS25} [get_ports  MDIO_PHY_mdc]       ;
+# set_property  -dict {PACKAGE_PIN  A20   IOSTANDARD  LVCMOS25} [get_ports  MDIO_PHY_mdio_io]   ;
 
-set_property  -dict {PACKAGE_PIN  E19   IOSTANDARD  LVCMOS25} [get_ports  RGMII_tx_ctl] ;
-set_property  -dict {PACKAGE_PIN  F17   IOSTANDARD  LVCMOS25} [get_ports  RGMII_txc]    ; 
-set_property  -dict {PACKAGE_PIN  D18   IOSTANDARD  LVCMOS25} [get_ports  RGMII_td[0]]  ;
-set_property  -dict {PACKAGE_PIN  D19   IOSTANDARD  LVCMOS25} [get_ports  RGMII_td[1]]  ;
-set_property  -dict {PACKAGE_PIN  D20   IOSTANDARD  LVCMOS25} [get_ports  RGMII_td[2]]  ;
-set_property  -dict {PACKAGE_PIN  E18   IOSTANDARD  LVCMOS25} [get_ports  RGMII_td[3]]  ;
+# set_property  -dict {PACKAGE_PIN  E19   IOSTANDARD  LVCMOS25} [get_ports  RGMII_tx_ctl] ;
+# set_property  -dict {PACKAGE_PIN  F17   IOSTANDARD  LVCMOS25} [get_ports  RGMII_txc]    ; 
+# set_property  -dict {PACKAGE_PIN  D18   IOSTANDARD  LVCMOS25} [get_ports  RGMII_td[0]]  ;
+# set_property  -dict {PACKAGE_PIN  D19   IOSTANDARD  LVCMOS25} [get_ports  RGMII_td[1]]  ;
+# set_property  -dict {PACKAGE_PIN  D20   IOSTANDARD  LVCMOS25} [get_ports  RGMII_td[2]]  ;
+# set_property  -dict {PACKAGE_PIN  A17   IOSTANDARD  LVCMOS25} [get_ports  RGMII_td[3]]  ;
 
-set_property  -dict {PACKAGE_PIN  M17   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rx_ctl] ;
-set_property  -dict {PACKAGE_PIN  H16   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rxc]    ;
-set_property  -dict {PACKAGE_PIN  L20   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rd[0]]  ;
-set_property  -dict {PACKAGE_PIN  L19   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rd[1]]  ;
-set_property  -dict {PACKAGE_PIN  M19   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rd[2]]  ;
-set_property  -dict {PACKAGE_PIN  M20   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rd[3]]  ;
+# set_property  -dict {PACKAGE_PIN  M17   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rx_ctl] ;
+# set_property  -dict {PACKAGE_PIN  H16   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rxc]    ;
+# set_property  -dict {PACKAGE_PIN  L20   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rd[0]]  ;
+# set_property  -dict {PACKAGE_PIN  L19   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rd[1]]  ;
+# set_property  -dict {PACKAGE_PIN  M19   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rd[2]]  ;
+# set_property  -dict {PACKAGE_PIN  M20   IOSTANDARD  LVCMOS25} [get_ports  RGMII_rd[3]]  ;
 
-create_clock -period 8.000 -name RGMII_rxc -waveform {0.000 4.000} [get_ports RGMII_rxc]
+# create_clock -period 8.000 -name RGMII_rxc -waveform {0.000 4.000} [get_ports RGMII_rxc]
 
-set_property SLEW FAST [get_ports  RGMII_tx_ctl]
-set_property SLEW FAST [get_ports  RGMII_txc]
-set_property SLEW FAST [get_ports {RGMII_td[*]}]
+# set_property SLEW FAST [get_ports  RGMII_tx_ctl]
+# set_property SLEW FAST [get_ports  RGMII_txc]
+# set_property SLEW FAST [get_ports {RGMII_td[*]}]
 # constraints
 # ad9361
 
@@ -107,12 +107,12 @@ create_clock -name rx_clk       -period  4 [get_ports rx_clk_in_p]
 
 
 #====================GPS singlas loop back==========================
-set_property  -dict {PACKAGE_PIN  G17  IOSTANDARD LVCMOS25} [get_ports nrst]                              ; 
-set_property  -dict {PACKAGE_PIN  G18  IOSTANDARD LVCMOS25} [get_ports GPS_rx]                            ; 
-set_property  -dict {PACKAGE_PIN  j20  IOSTANDARD LVCMOS25} [get_ports GPS_tx]                            ; 
-set_property  -dict {PACKAGE_PIN  F19  IOSTANDARD LVCMOS25} [get_ports GPS_rx_loop_back]                  ; 
-set_property  -dict {PACKAGE_PIN  F20  IOSTANDARD LVCMOS25} [get_ports GPS_tx_loop_back]                  ; 
-set_property  -dict {PACKAGE_PIN  F16  IOSTANDARD LVCMOS25} [get_ports os_output]                  ; 
+set_property  -dict {PACKAGE_PIN  G17  IOSTANDARD LVCMOS25 PULLTYPE PULLUP} [get_ports nrst]                              ; 
+set_property  -dict {PACKAGE_PIN  J20  IOSTANDARD LVCMOS25} [get_ports GPS_rx]                            ; 
+set_property  -dict {PACKAGE_PIN  G18  IOSTANDARD LVCMOS25} [get_ports GPS_tx]                            ; 
+set_property  -dict {PACKAGE_PIN  E17  IOSTANDARD LVCMOS25} [get_ports GPS_rx_loop_back]                  ; 
+set_property  -dict {PACKAGE_PIN  E18  IOSTANDARD LVCMOS25} [get_ports GPS_tx_loop_back]                  ; 
+# set_property  -dict {PACKAGE_PIN  E17  IOSTANDARD LVCMOS25} [get_ports os_output]                  ; 
 
 
 

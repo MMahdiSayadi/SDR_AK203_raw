@@ -148,6 +148,8 @@ foreach tcl_path $tclfiles {
 		source $tcl_path
 		make_wrapper -files [get_files $complete_path_of_bd] -top
 		add_files -norecurse $complete_path_of_wrapper
+		regenerate_bd_layout
+		save_bd_design
 		close_bd_design [get_bd_designs bd_name]
 	}
 }
