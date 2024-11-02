@@ -435,7 +435,7 @@ int main(void)
 	uint64_t Lo=1581000000;
 	//uint64_t Lo=1575420000;
 	int32_t Fs=45000000;
-	uint32_t att=20000;
+	uint32_t att=50000;
 	ad9361_init(&ad9361_phy, &default_init_param);
 	ad9361_set_tx_sampling_freq (ad9361_phy, Fs);
 	ad9361_set_tx_lo_freq (ad9361_phy, Lo);

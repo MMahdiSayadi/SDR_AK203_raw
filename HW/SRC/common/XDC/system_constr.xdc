@@ -108,10 +108,10 @@ create_clock -name rx_clk       -period  4 [get_ports rx_clk_in_p]
 
 #====================GPS singlas loop back==========================
 set_property  -dict {PACKAGE_PIN  G17  IOSTANDARD LVCMOS25 PULLTYPE PULLUP} [get_ports nrst]                              ; 
-set_property  -dict {PACKAGE_PIN  J20  IOSTANDARD LVCMOS25} [get_ports GPS_rx]                            ; 
-set_property  -dict {PACKAGE_PIN  G18  IOSTANDARD LVCMOS25} [get_ports GPS_tx]                            ; 
-set_property  -dict {PACKAGE_PIN  E17  IOSTANDARD LVCMOS25} [get_ports GPS_rx_loop_back]                  ; 
-set_property  -dict {PACKAGE_PIN  E18  IOSTANDARD LVCMOS25} [get_ports GPS_tx_loop_back]                  ; 
+set_property  -dict {PACKAGE_PIN  G18  IOSTANDARD LVCMOS25} [get_ports GPS_rx]                            ; 
+set_property  -dict {PACKAGE_PIN  J20  IOSTANDARD LVCMOS25} [get_ports GPS_tx]                            ; 
+set_property  -dict {PACKAGE_PIN  L19  IOSTANDARD LVCMOS25} [get_ports GPS_rx_loop_back]                  ; 
+set_property  -dict {PACKAGE_PIN  F19  IOSTANDARD LVCMOS25} [get_ports GPS_tx_loop_back]                  ; 
 # set_property  -dict {PACKAGE_PIN  E17  IOSTANDARD LVCMOS25} [get_ports os_output]                  ; 
 
 
